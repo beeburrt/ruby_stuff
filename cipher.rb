@@ -26,5 +26,5 @@ def caesar_cipher(str, key)
   str = num_arr.pack("C*")
 end
 
-p caesar_cipher("This is it!", 1)
-p caesar_cipher("This is it!", 27)
+p caesar_cipher("What a string!", 5)
+p caesar_cipher("What a string!", 31)
