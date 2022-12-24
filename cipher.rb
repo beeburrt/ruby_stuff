@@ -5,21 +5,20 @@ def caesar_cipher(str, key)
 
   num_arr = []
 
-  # convert str to array of corresponding ascii codes & loop over it
+  # convert str to array of corresponding ascii codes
   str.unpack("C*").each do |n|
 
-    # if it's not in the alphabet, keep it as is
+    # if it's not a letter (a-z or A-Z), keep it as is
     num_arr << n unless n.between?(65, 90) || n.between?(97, 122)
 
     encoded = n + key
 
     num_arr << encoded if encoded.between?(65, 90) || encoded.between?(97, 122)
 
-    # after adding key, if it's past 'z', circle back to 'a'
+    # after addition of 'key', if we're past 'z', circle back to 'a'
     if (n.between?(65, 90) && encoded > 90) || (n.between?(97, 122) && encoded > 122)
       num_arr << encoded - 26
     end
-
   end
 
   # convert it back from array of ascii codes to a string
