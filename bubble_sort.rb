@@ -10,7 +10,9 @@ def bubble_sort(arr)
     sorted = false
     (len).times do |i|
       if arr[i] > arr[i + 1]
-        arr[i], arr[i + 1] = arr[i + 1], arr[i]
+        temp = arr[i]
+        arr[i] = arr[i + 1]
+        arr[i + 1] = temp
         sorted = true
       end
     end
