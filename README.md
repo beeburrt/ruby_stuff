@@ -24,3 +24,5 @@ returns a pair of days, the best day to buy, and best day to sell.
 ---
 
 ### bubble_sort.rb
+
+Build a method #bubble_sort that takes an array and returns a sorted array. Must not use #sort.
