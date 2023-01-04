@@ -5,10 +5,14 @@
 #   methodology (in other words, no using #sort)
 
 def bubble_sort(arr)
-  len = arr.length - 1
-  loop do
+  len = arr.length
+  return arr if len <= 1 # sorted already
+
+  sorted = true
+
+  while sorted
     sorted = false
-    (len).times do |i|
+    (len - 1).times do |i|
       if arr[i] > arr[i + 1]
         temp = arr[i]
         arr[i] = arr[i + 1]
@@ -16,8 +20,8 @@ def bubble_sort(arr)
         sorted = true
       end
     end
-    break unless sorted
   end
+
   arr
 end
 
